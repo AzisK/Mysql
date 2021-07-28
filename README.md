@@ -23,8 +23,9 @@ TL;DR go to [Setup Database](#setup-database) to start the database
 Because we have a volume specified and have it bound to `/var/lib/mysql`, the Mysql data is persisted even if our containers go down or are removed. To fully restart the database and remove its current data, we need to delete the volume. We need to delete the volume also if we want for Docker to run the initialization scripts with the next run as well.
 
 ```bash
-    DRIVER              VOLUME NAME
-    local               mysql_mysql-data
+docker volume ls
+DRIVER              VOLUME NAME
+local               mysql_mysql-data
 ```
 
 1. Stop docker containers `docker-compose down`
