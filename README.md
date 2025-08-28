@@ -3,7 +3,7 @@
 TL;DR go to [Setup Database](#setup-database) to start the database
 
 - Mysql setup on Docker is convenient because it is easy to switch through different Mysql versions or even have different Mysql containers with different versions
-- It is also good becaue it takes care of all the instalations and all we need to do is specify the version via tag, e.g. `mysql:5.7.27`
+- It is also good becaue it takes care of all the instalations and all we need to do is specify the version via tag, e.g. `mysql:8.0.32`
 - It is easy to configure Mysql through `docker-compose.yaml`. We can specify the database, user, password, port.
 - Docker also allows to have database initialization scripts that are run when the database is created. This can be very convenient when developing various applications using databases. In this case the scripts are in the `initdb` folder. They are run in alphabetical order and should not have any SQL syntax errors.
 
@@ -45,7 +45,7 @@ Adminer is a database client that we can use to connect to the database, look at
 Field | Value
 ---|---
 System | MySQL
-Server | mysql
+Server | docker-mysql
 Username | root
 Password | root
 Database | test_db
