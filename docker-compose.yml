@@ -1,9 +1,9 @@
 version: '3.8'
 
 services:
-
   mysql:
     image: mysql:8.0.32
+    container_name: docker-mysql
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: root
@@ -16,10 +16,10 @@ services:
 
   adminer:
     image: adminer
+    container_name: docker-adminer
     restart: always
     ports:
       - 8080:8080
 
 volumes:
-
     mysql-data:
