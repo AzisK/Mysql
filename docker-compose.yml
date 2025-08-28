@@ -6,6 +6,7 @@ services:
     container_name: docker-mysql
     restart: always
     environment:
+      # MYSQL_USER: root
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: test_db
     ports:
